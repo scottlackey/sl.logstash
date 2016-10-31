@@ -35,18 +35,18 @@ ssl_enabled: true
 
 ## example group_vars
 
-logstash_listen_port_beats: 5044
-beats_in: true
-kafka_out: true
-kafka_in: false
-es_out: false
-kafka_hosts: "kafka-0.example.com, kafka-1.example.com"
-kafka_topic: "mytopic"
-logstash_heap_size: 6g
+    logstash_listen_port_beats: 5044
+    beats_in: true
+    kafka_out: true
+    kafka_in: false
+    es_out: false
+    kafka_hosts: "kafka-0.example.com, kafka-1.example.com"
+    kafka_topic: "mytopic"
+    logstash_heap_size: 6g
 #SSL
-ssl_enabled: true
-logstash_ssl_dir: /etc/pki/logstash
-logstash_ssl_certificate_file: server.crt
-logstash_ssl_cafile: ca.crt
-logstash_ssl_key_file: server.key
+    ssl_enabled: true
+    logstash_ssl_dir: /etc/pki/logstash
+    logstash_ssl_certificate_file: server.crt
+    logstash_ssl_cafile: ca.crt
+    logstash_ssl_key_file: server.key
 
