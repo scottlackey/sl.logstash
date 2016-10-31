@@ -1,6 +1,6 @@
 galaxy_info:
   author: Scott Lackey
-  description: Installs and configures logstash
+  description: Installs and configures logstash with SSL/TLS options for managing filebeat certs
   company: Scott Lackey
 
   # If the issue tracker for your role is not on github, uncomment the
@@ -200,6 +200,7 @@ galaxy_info:
     - ELK
     - kafka
     - logging
+    - filebeat
     # List tags for your role here, one per line. A tag is
     # a keyword that describes and categorizes the role.
     # Users find roles by searching for tags. Be sure to
