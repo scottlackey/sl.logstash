@@ -8,16 +8,15 @@ This module is designed to allow for kafka or elasticsearch outputs and beats in
 
 ## Role Variables
 
-The hosts where Logstash should ship logs to Elasticsearch.
+## The hosts where Logstash should ship logs to Elasticsearch.
     logstash_elasticsearch_hosts:
     - http://localhost:9200
 
-
-The hosts where Logstash should ship logs to kafka
+## The hosts where Logstash should ship logs to kafka
     logstash_kafka_hosts:
     - http://localhost:9091
 
-Logstash plugins
+## Logstash plugins
     logstash_install_plugins:
     - logstash-input-beats
 
