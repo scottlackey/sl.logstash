@@ -1,0 +1,5 @@
+---
+logstash_ssl_key: |
+      -----BEGIN PRIVATE KEY-----
+#add your key here and then encrypt with vault
+      -----END PRIVATE KEY-----

@@ -1,0 +1,6 @@
+output {
+  kafka {
+    bootstrap_servers => "{{ kafka_hosts }}"
+    topic_id => "{{ kafka_topic }}"
+  }
+}

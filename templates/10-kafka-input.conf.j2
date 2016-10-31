@@ -1,0 +1,7 @@
+input {
+  kafka {
+    zk_connect => "{{ zookeeper_hosts }}"
+    topic_id => "{{ kafka_topic }}"
+    tags  => ["mongo", "logstash"]
+  }
+}

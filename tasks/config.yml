@@ -1,0 +1,68 @@
+---
+- name: set /etc/defaults values
+  template: 
+    src: etc_defaults_logstash.conf.j2
+    dest: /etc/default/logstash
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart logstash
+    
+- name: Create kafka input config
+  template:
+    src: "{{ item }}.j2"
+    dest: "/etc/logstash/conf.d/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - 10-kafka-input.conf
+  when: kafka_in
+  notify: restart logstash
+
+- name: Create kafka out config
+  template:
+    src: "{{ item }}.j2"
+    dest: "/etc/logstash/conf.d/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - 20-kafka-output.conf
+  when: kafka_out
+  notify: restart logstash
+
+- name: Create elastic out config
+  template:
+    src: "{{ item }}.j2"
+    dest: "/etc/logstash/conf.d/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - 30-elasticsearch-output.conf
+  when: es_out
+  notify: restart logstash
+
+- name: Create beats input config
+  template:
+    src: "{{ item }}.j2"
+    dest: "/etc/logstash/conf.d/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - 01-beats-input.conf
+  when: beats_in
+  notify: restart logstash
+
+#- name: Create Logstash filters.
+#  copy:
+#    src: "filters/{{ item }}"
+#    dest: "/etc/logstash/conf.d/{{ item }}"
+#    owner: root
+#    group: root
+#    mode: 0644
+#  with_items:
+#  notify: restart logstash
+

@@ -1,0 +1,7 @@
+galaxy_name: sl.logstash
+github_user: scottlackey
+github_name: logstash
+badges: |
+description: |
+  > * installs logstash
+  > * configures logstash

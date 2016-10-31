@@ -1,0 +1,8 @@
+output {
+  elasticsearch {
+    hosts => {{ logstash_elasticsearch_hosts | to_json }}
+#add your username for elastic here
+    user     => "Your_username"
+    password => "{{ elastic_pass }}"
+  }
+}
