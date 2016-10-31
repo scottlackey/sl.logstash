@@ -1,4 +1,4 @@
-galaxy_name: sl.logstash
+galaxy_name: sl_logstash
 github_user: scottlackey
 github_name: logstash
 badges: |

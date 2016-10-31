@@ -1,4 +1,4 @@
-# Logstash role for Ansible
+# Logstash role for Ansible sl_logstash
 
 An Ansible Role that manages Logstash on Debian/Ubuntu/Centos with configuration options for kafka and elasticsearch for use in an ELK stack. Includes options for SSL/TLS 
 
@@ -26,7 +26,7 @@ This module is designed to allow for kafka or elasticsearch outputs and beats in
       vars_files:
         - vars/secrets.yml 
       roles:
-        - sl.logstash
+        - sl_logstash
 
 ## To use TLS/SSL settings
 ssl_enabled: true 
