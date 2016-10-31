@@ -1,6 +1,6 @@
 galaxy_info:
   author: Scott Lackey
-  description: Installs and configures logstash with SSL/TLS options for managing filebeat certs
+  description: Installs and configures logstash with SSL/TLS options and inputs/outputs for kafka and filebeat
   company: Scott Lackey
 
   # If the issue tracker for your role is not on github, uncomment the
