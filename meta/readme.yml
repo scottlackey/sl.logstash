@@ -1,6 +1,6 @@
-galaxy_name: sl_logstash
+galaxy_name: sl.logstash
 github_user: scottlackey
-github_name: logstash
+github_name: sl.logstash
 badges: |
 description: |
   > * installs logstash
